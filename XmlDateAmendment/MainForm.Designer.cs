@@ -28,42 +28,67 @@ namespace Proscript_Utilities
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnSubmit = new System.Windows.Forms.Button();
-            this.txtInput = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
-            // btnSubmit
+            // label1
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(100, 100);
-            this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(75, 23);
-            this.btnSubmit.TabIndex = 0;
-            this.btnSubmit.Text = "Submit";
-            this.btnSubmit.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(20, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Example Label:";
             // 
-            // txtInput
+            // textBox1
             // 
-            this.txtInput.Location = new System.Drawing.Point(12, 12);
-            this.txtInput.Name = "txtInput";
-            this.txtInput.Size = new System.Drawing.Size(360, 20);
-            this.txtInput.TabIndex = 1;
+            this.textBox1.Location = new System.Drawing.Point(120, 20);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(20, 60);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Submit";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(120, 60);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(80, 17);
+            this.checkBox1.TabIndex = 3;
+            this.checkBox1.Text = "Check me";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 161);
-            this.Controls.Add(this.txtInput);
-            this.Controls.Add(this.btnSubmit);
+            this.ClientSize = new System.Drawing.Size(300, 100);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label1);
             this.Name = "MainForm";
-            this.Text = "MainForm";
+            this.Text = "Main Form";
             this.ResumeLayout(false);
             this.PerformLayout();
         }
 
-        #endregion
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox checkBox1;
 
-        private System.Windows.Forms.Button btnSubmit;
-        private System.Windows.Forms.TextBox txtInput;
+        #endregion
     }
 }
