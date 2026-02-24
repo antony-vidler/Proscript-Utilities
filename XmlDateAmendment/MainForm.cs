@@ -1,9 +1,7 @@
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Xml;
 using System.Windows.Forms;
-using System.Linq;
 
 namespace XmlDateAmendment
 {
@@ -22,6 +20,8 @@ namespace XmlDateAmendment
                 if (dialog.ShowDialog() == DialogResult.OK)
                 {
                     txtSourceFolder.Text = dialog.SelectedPath;
+                    string outputFolder = Path.Combine(dialog.SelectedPath, "output");
+                    txtDestinationFolder.Text = outputFolder;
                 }
             }
         }
@@ -78,7 +78,6 @@ namespace XmlDateAmendment
             try
             {
                 ProcessXmlFiles(txtSourceFolder.Text, txtDestinationFolder.Text, amendmentDate, chkAutoGenerateTransactionId.Checked);
-                MessageBox.Show("Amendment completed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -140,7 +139,7 @@ namespace XmlDateAmendment
                         node.InnerText = formattedDate;
                     }
 
-                    string destinationPath = System.IO.Path.Combine(destinationFolder, file.Name);
+                    string destinationPath = Path.Combine(destinationFolder, file.Name);
                     XmlWriterSettings settings = new XmlWriterSettings
                     {
                         Indent = true,
