@@ -1,23 +1,169 @@
-        // Existing code...
+namespace XmlDateAmendment
+{
+    partial class MainForm
+    {
+        private System.ComponentModel.IContainer components = null;
 
-        // Button event handlers
-        this.btnSourceBrowse.Click += new System.EventHandler(this.btnSourceBrowse_Click);
-        // Existing code...
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
 
-        // Existing code...
+        private void InitializeComponent()
+        {
+            this.lblSourceFolder = new System.Windows.Forms.Label();
+            this.txtSourceFolder = new System.Windows.Forms.TextBox();
+            this.btnSourceBrowse = new System.Windows.Forms.Button();
+            this.lblDestinationFolder = new System.Windows.Forms.Label();
+            this.txtDestinationFolder = new System.Windows.Forms.TextBox();
+            this.btnDestinationBrowse = new System.Windows.Forms.Button();
+            this.lblAmendmentDate = new System.Windows.Forms.Label();
+            this.txtAmendmentDate = new System.Windows.Forms.TextBox();
+            this.lblDateHint = new System.Windows.Forms.Label();
+            this.chkAutoGenerateTransactionId = new System.Windows.Forms.CheckBox();
+            this.btnChange = new System.Windows.Forms.Button();
+            this.btnEsc = new System.Windows.Forms.Button();
+            this.SuspendLayout();
 
-        // Button event handlers
-        this.btnDestinationBrowse.Click += new System.EventHandler(this.btnDestinationBrowse_Click);
-        // Existing code...
+            // lblSourceFolder
+            this.lblSourceFolder.AutoSize = true;
+            this.lblSourceFolder.Location = new System.Drawing.Point(12, 18);
+            this.lblSourceFolder.Name = "lblSourceFolder";
+            this.lblSourceFolder.Size = new System.Drawing.Size(83, 15);
+            this.lblSourceFolder.TabIndex = 0;
+            this.lblSourceFolder.Text = "Source Folder:";
 
-        // Existing code...
+            // txtSourceFolder
+            this.txtSourceFolder.Location = new System.Drawing.Point(150, 15);
+            this.txtSourceFolder.Name = "txtSourceFolder";
+            this.txtSourceFolder.ReadOnly = true;
+            this.txtSourceFolder.Size = new System.Drawing.Size(360, 23);
+            this.txtSourceFolder.TabIndex = 1;
+            this.txtSourceFolder.TextChanged += new System.EventHandler(this.txtSourceFolder_TextChanged);
 
-        // Button event handlers
-        this.btnChange.Click += new System.EventHandler(this.btnChange_Click);
-        // Existing code...
+            // btnSourceBrowse
+            this.btnSourceBrowse.Location = new System.Drawing.Point(525, 14);
+            this.btnSourceBrowse.Name = "btnSourceBrowse";
+            this.btnSourceBrowse.Size = new System.Drawing.Size(80, 25);
+            this.btnSourceBrowse.TabIndex = 2;
+            this.btnSourceBrowse.Text = "Browse...";
+            this.btnSourceBrowse.UseVisualStyleBackColor = true;
+            this.btnSourceBrowse.Click += new System.EventHandler(this.btnSourceBrowse_Click);
 
-        // Existing code...
+            // lblDestinationFolder
+            this.lblDestinationFolder.AutoSize = true;
+            this.lblDestinationFolder.Location = new System.Drawing.Point(12, 55);
+            this.lblDestinationFolder.Name = "lblDestinationFolder";
+            this.lblDestinationFolder.Size = new System.Drawing.Size(111, 15);
+            this.lblDestinationFolder.TabIndex = 3;
+            this.lblDestinationFolder.Text = "Destination Folder:";
 
-        // Button event handlers
-        this.btnEsc.Click += new System.EventHandler(this.btnEsc_Click);
-        // Existing code...
+            // txtDestinationFolder
+            this.txtDestinationFolder.Location = new System.Drawing.Point(150, 52);
+            this.txtDestinationFolder.Name = "txtDestinationFolder";
+            this.txtDestinationFolder.ReadOnly = true;
+            this.txtDestinationFolder.Size = new System.Drawing.Size(360, 23);
+            this.txtDestinationFolder.TabIndex = 4;
+
+            // btnDestinationBrowse
+            this.btnDestinationBrowse.Location = new System.Drawing.Point(525, 51);
+            this.btnDestinationBrowse.Name = "btnDestinationBrowse";
+            this.btnDestinationBrowse.Size = new System.Drawing.Size(80, 25);
+            this.btnDestinationBrowse.TabIndex = 5;
+            this.btnDestinationBrowse.Text = "Browse...";
+            this.btnDestinationBrowse.UseVisualStyleBackColor = true;
+            this.btnDestinationBrowse.Click += new System.EventHandler(this.btnDestinationBrowse_Click);
+
+            // lblAmendmentDate
+            this.lblAmendmentDate.AutoSize = true;
+            this.lblAmendmentDate.Location = new System.Drawing.Point(12, 94);
+            this.lblAmendmentDate.Name = "lblAmendmentDate";
+            this.lblAmendmentDate.Size = new System.Drawing.Size(101, 15);
+            this.lblAmendmentDate.TabIndex = 6;
+            this.lblAmendmentDate.Text = "Amendment Date:";
+
+            // txtAmendmentDate
+            this.txtAmendmentDate.Location = new System.Drawing.Point(150, 91);
+            this.txtAmendmentDate.Name = "txtAmendmentDate";
+            this.txtAmendmentDate.Size = new System.Drawing.Size(120, 23);
+            this.txtAmendmentDate.TabIndex = 7;
+
+            // lblDateHint
+            this.lblDateHint.AutoSize = true;
+            this.lblDateHint.ForeColor = System.Drawing.Color.Gray;
+            this.lblDateHint.Location = new System.Drawing.Point(278, 94);
+            this.lblDateHint.Name = "lblDateHint";
+            this.lblDateHint.Size = new System.Drawing.Size(113, 15);
+            this.lblDateHint.TabIndex = 8;
+            this.lblDateHint.Text = "Format: dd/MM/yyyy";
+
+            // chkAutoGenerateTransactionId
+            this.chkAutoGenerateTransactionId.AutoSize = true;
+            this.chkAutoGenerateTransactionId.Location = new System.Drawing.Point(150, 130);
+            this.chkAutoGenerateTransactionId.Name = "chkAutoGenerateTransactionId";
+            this.chkAutoGenerateTransactionId.Size = new System.Drawing.Size(196, 19);
+            this.chkAutoGenerateTransactionId.TabIndex = 9;
+            this.chkAutoGenerateTransactionId.Text = "Auto Generate Transaction ID";
+            this.chkAutoGenerateTransactionId.UseVisualStyleBackColor = true;
+
+            // btnChange
+            this.btnChange.Location = new System.Drawing.Point(150, 170);
+            this.btnChange.Name = "btnChange";
+            this.btnChange.Size = new System.Drawing.Size(90, 30);
+            this.btnChange.TabIndex = 10;
+            this.btnChange.Text = "Change";
+            this.btnChange.UseVisualStyleBackColor = true;
+            this.btnChange.Click += new System.EventHandler(this.btnChange_Click);
+
+            // btnEsc
+            this.btnEsc.Location = new System.Drawing.Point(255, 170);
+            this.btnEsc.Name = "btnEsc";
+            this.btnEsc.Size = new System.Drawing.Size(90, 30);
+            this.btnEsc.TabIndex = 11;
+            this.btnEsc.Text = "Esc";
+            this.btnEsc.UseVisualStyleBackColor = true;
+            this.btnEsc.Click += new System.EventHandler(this.btnEsc_Click);
+
+            // MainForm
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(624, 221);
+            this.Controls.Add(this.lblSourceFolder);
+            this.Controls.Add(this.txtSourceFolder);
+            this.Controls.Add(this.btnSourceBrowse);
+            this.Controls.Add(this.lblDestinationFolder);
+            this.Controls.Add(this.txtDestinationFolder);
+            this.Controls.Add(this.btnDestinationBrowse);
+            this.Controls.Add(this.lblAmendmentDate);
+            this.Controls.Add(this.txtAmendmentDate);
+            this.Controls.Add(this.lblDateHint);
+            this.Controls.Add(this.chkAutoGenerateTransactionId);
+            this.Controls.Add(this.btnChange);
+            this.Controls.Add(this.btnEsc);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "XML Date Amendment";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+        }
+
+        private System.Windows.Forms.Label lblSourceFolder;
+        private System.Windows.Forms.TextBox txtSourceFolder;
+        private System.Windows.Forms.Button btnSourceBrowse;
+        private System.Windows.Forms.Label lblDestinationFolder;
+        private System.Windows.Forms.TextBox txtDestinationFolder;
+        private System.Windows.Forms.Button btnDestinationBrowse;
+        private System.Windows.Forms.Label lblAmendmentDate;
+        private System.Windows.Forms.TextBox txtAmendmentDate;
+        private System.Windows.Forms.Label lblDateHint;
+        private System.Windows.Forms.CheckBox chkAutoGenerateTransactionId;
+        private System.Windows.Forms.Button btnChange;
+        private System.Windows.Forms.Button btnEsc;
+    }
+}

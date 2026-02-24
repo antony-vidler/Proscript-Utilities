@@ -1,0 +1,15 @@
+/home/runner/work/Proscript-Utilities/Proscript-Utilities/XmlDateAmendment/bin/Debug/net9.0-windows/XmlDateAmendment
+/home/runner/work/Proscript-Utilities/Proscript-Utilities/XmlDateAmendment/bin/Debug/net9.0-windows/XmlDateAmendment.deps.json
+/home/runner/work/Proscript-Utilities/Proscript-Utilities/XmlDateAmendment/bin/Debug/net9.0-windows/XmlDateAmendment.runtimeconfig.json
+/home/runner/work/Proscript-Utilities/Proscript-Utilities/XmlDateAmendment/bin/Debug/net9.0-windows/XmlDateAmendment.dll
+/home/runner/work/Proscript-Utilities/Proscript-Utilities/XmlDateAmendment/bin/Debug/net9.0-windows/XmlDateAmendment.pdb
+/home/runner/work/Proscript-Utilities/Proscript-Utilities/XmlDateAmendment/obj/Debug/net9.0-windows/XmlDateAmendment.GeneratedMSBuildEditorConfig.editorconfig
+/home/runner/work/Proscript-Utilities/Proscript-Utilities/XmlDateAmendment/obj/Debug/net9.0-windows/XmlDateAmendment.AssemblyInfoInputs.cache
+/home/runner/work/Proscript-Utilities/Proscript-Utilities/XmlDateAmendment/obj/Debug/net9.0-windows/XmlDateAmendment.AssemblyInfo.cs
+/home/runner/work/Proscript-Utilities/Proscript-Utilities/XmlDateAmendment/obj/Debug/net9.0-windows/XmlDateAmendment.csproj.CoreCompileInputs.cache
+/home/runner/work/Proscript-Utilities/Proscript-Utilities/XmlDateAmendment/obj/Debug/net9.0-windows/XmlDateAmendment.sourcelink.json
+/home/runner/work/Proscript-Utilities/Proscript-Utilities/XmlDateAmendment/obj/Debug/net9.0-windows/XmlDateAmendment.dll
+/home/runner/work/Proscript-Utilities/Proscript-Utilities/XmlDateAmendment/obj/Debug/net9.0-windows/refint/XmlDateAmendment.dll
+/home/runner/work/Proscript-Utilities/Proscript-Utilities/XmlDateAmendment/obj/Debug/net9.0-windows/XmlDateAmendment.pdb
+/home/runner/work/Proscript-Utilities/Proscript-Utilities/XmlDateAmendment/obj/Debug/net9.0-windows/XmlDateAmendment.genruntimeconfig.cache
+/home/runner/work/Proscript-Utilities/Proscript-Utilities/XmlDateAmendment/obj/Debug/net9.0-windows/ref/XmlDateAmendment.dll

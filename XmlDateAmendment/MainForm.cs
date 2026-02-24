@@ -26,6 +26,14 @@ namespace XmlDateAmendment
             }
         }
 
+        private void txtSourceFolder_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(txtSourceFolder.Text))
+            {
+                txtDestinationFolder.Text = System.IO.Path.Combine(txtSourceFolder.Text, "output");
+            }
+        }
+
         private void btnDestinationBrowse_Click(object sender, EventArgs e)
         {
             using (FolderBrowserDialog dialog = new FolderBrowserDialog())
@@ -78,7 +86,6 @@ namespace XmlDateAmendment
             try
             {
                 ProcessXmlFiles(txtSourceFolder.Text, txtDestinationFolder.Text, amendmentDate, chkAutoGenerateTransactionId.Checked);
-                MessageBox.Show("Amendment completed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -89,7 +96,8 @@ namespace XmlDateAmendment
         private void ProcessXmlFiles(string sourceFolder, string destinationFolder, DateTime amendmentDate, bool autoGenerateTransactionId)
         {
             string formattedDate = amendmentDate.ToString("yyyy-MM-dd");
-            string dateTimeValue = amendmentDate.ToString("yyyy-MM-dd") + "T00:00:00";
+            string currentTime = DateTime.Now.ToString("HH:mm:ss");
+            string dateTimeValue = amendmentDate.ToString("yyyy-MM-dd") + "T" + currentTime;
 
             DirectoryInfo sourceDir = new DirectoryInfo(sourceFolder);
             FileInfo[] xmlFiles = sourceDir.GetFiles("*.xml");
