@@ -1,9 +1,7 @@
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Xml;
 using System.Windows.Forms;
-using System.Linq;
 
 namespace XmlDateAmendment
 {
@@ -12,6 +10,14 @@ namespace XmlDateAmendment
         public MainForm()
         {
             InitializeComponent();
+        }
+
+        private void txtSourceFolder_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(txtSourceFolder.Text))
+            {
+                txtDestinationFolder.Text = Path.Combine(txtSourceFolder.Text, "output");
+            }
         }
 
         private void btnSourceBrowse_Click(object sender, EventArgs e)
@@ -64,9 +70,11 @@ namespace XmlDateAmendment
                 return;
             }
 
-            if (!DateTime.TryParseExact(txtAmendmentDate.Text, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out DateTime amendmentDate))
+            if (!DateTime.TryParseExact(txtAmendmentDate.Text, "dd/MM/yyyy",
+                System.Globalization.CultureInfo.InvariantCulture,
+                System.Globalization.DateTimeStyles.None, out DateTime amendmentDate))
             {
-                MessageBox.Show("Invalid date format. Please use dd/MM/yyyy (e.g., 23/02/2026)", "Date Format Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Invalid date format. Please use dd/MM/yyyy (e.g., 24/02/2026)", "Date Format Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -78,7 +86,6 @@ namespace XmlDateAmendment
             try
             {
                 ProcessXmlFiles(txtSourceFolder.Text, txtDestinationFolder.Text, amendmentDate, chkAutoGenerateTransactionId.Checked);
-                MessageBox.Show("Amendment completed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -89,7 +96,8 @@ namespace XmlDateAmendment
         private void ProcessXmlFiles(string sourceFolder, string destinationFolder, DateTime amendmentDate, bool autoGenerateTransactionId)
         {
             string formattedDate = amendmentDate.ToString("yyyy-MM-dd");
-            string dateTimeValue = amendmentDate.ToString("yyyy-MM-dd") + "T00:00:00";
+            DateTime now = DateTime.Now;
+            string dateTimeValue = amendmentDate.ToString("yyyy-MM-dd") + "T" + now.ToString("HH:mm:ss");
 
             DirectoryInfo sourceDir = new DirectoryInfo(sourceFolder);
             FileInfo[] xmlFiles = sourceDir.GetFiles("*.xml");
@@ -140,7 +148,7 @@ namespace XmlDateAmendment
                         node.InnerText = formattedDate;
                     }
 
-                    string destinationPath = System.IO.Path.Combine(destinationFolder, file.Name);
+                    string destinationPath = Path.Combine(destinationFolder, file.Name);
                     XmlWriterSettings settings = new XmlWriterSettings
                     {
                         Indent = true,
